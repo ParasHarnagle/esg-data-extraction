@@ -38,8 +38,8 @@ wheels/
 data/*.db
 data/*.sqlite
 reports/*.pdf
-outputs/*.csv
-outputs/*.json
+# outputs/*.csv  # Commented out to include sample results
+# outputs/*.json
 
 # Logs
 *.log
