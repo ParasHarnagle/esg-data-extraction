@@ -1,0 +1,471 @@
+.app {
+  min-height: 100vh;
+  padding-bottom: 2rem;
+}
+
+.header {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-bottom: 1px solid rgba(20, 184, 166, 0.3);
+}
+
+.header-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+}
+
+.header-content h1 {
+  font-size: 2.5rem;
+  margin: 1rem 0 0.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #14b8a6, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.header-content p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  color: #94a3b8;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(20, 184, 166, 0.1);
+}
+
+.card h2 {
+  margin-bottom: 1.5rem;
+  color: #0f172a;
+  font-size: 1.5rem;
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #14b8a6;
+  box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.1);
+}
+
+.file-upload {
+  margin: 1.5rem 0;
+}
+
+.file-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  border: 2px dashed #cbd5e1;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.file-label:hover {
+  border-color: #14b8a6;
+  background: #f0fdfa;
+  color: #14b8a6;
+}
+
+.indicators-section {
+  margin: 2rem 0;
+}
+
+.indicators-section h3 {
+  margin-bottom: 1rem;
+  color: #1e293b;
+  font-size: 1.1rem;
+}
+
+.category-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.category-btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: white;
+}
+
+.category-btn.environmental {
+  background: linear-gradient(135deg, #14b8a6, #10b981);
+}
+
+.category-btn.social {
+  background: linear-gradient(135deg, #06b6d4, #0ea5e9);
+}
+
+.category-btn.governance {
+  background: linear-gradient(135deg, #8b5cf6, #a855f7);
+}
+
+.category-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.indicators-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 0.75rem;
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 8px;
+}
+
+.indicator-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.indicator-checkbox:hover {
+  background: #e2e8f0;
+}
+
+.indicator-checkbox input {
+  cursor: pointer;
+}
+
+.extract-btn {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, #14b8a6, #06b6d4);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  transition: all 0.2s;
+}
+
+.extract-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(20, 184, 166, 0.4);
+}
+
+.extract-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Logs */
+.logs-card {
+  background: rgba(15, 23, 42, 0.95);
+  color: white;
+  border: 1px solid rgba(20, 184, 166, 0.2);
+}
+
+.current-indicator {
+  padding: 1rem;
+  background: rgba(20, 184, 166, 0.15);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  border-left: 4px solid #14b8a6;
+}
+
+.logs {
+  max-height: 300px;
+  overflow-y: auto;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+}
+
+.log-entry {
+  padding: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  gap: 1rem;
+}
+
+.log-time {
+  color: #94a3b8;
+  flex-shrink: 0;
+}
+
+/* Results */
+.results-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.download-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: #14b8a6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.download-btn:hover {
+  background: #0d9488;
+  transform: translateY(-2px);
+}
+
+.results-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat {
+  padding: 1.5rem;
+  background: #f1f5f9;
+  border-radius: 12px;
+  text-align: center;
+  border: 2px solid transparent;
+  transition: all 0.2s;
+}
+
+.stat:hover {
+  border-color: #14b8a6;
+}
+
+.stat.success { background: #d1fae5; color: #065f46; border-color: #10b981; }
+.stat.warning { background: #fef3c7; color: #92400e; border-color: #f59e0b; }
+.stat.error { background: #fee2e2; color: #991b1b; border-color: #ef4444; }
+
+.stat-label {
+  display: block;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.8;
+}
+
+.stat-value {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* CSV Table View */
+.csv-table-container {
+  margin-top: 2rem;
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.csv-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.csv-table thead {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
+}
+
+.csv-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 2px solid #14b8a6;
+}
+
+.csv-table td {
+  padding: 0.875rem 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.csv-table tbody tr {
+  transition: background 0.2s;
+}
+
+.csv-table tbody tr:hover {
+  background: #f0fdfa;
+}
+
+.csv-table tbody tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+.csv-table tbody tr:nth-child(even):hover {
+  background: #f0fdfa;
+}
+
+.confidence-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.confidence-high {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.confidence-medium {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.confidence-low {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.results-table {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.result-row {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr 1fr;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  border-left: 4px solid #14b8a6;
+  transition: all 0.2s;
+}
+
+.result-row:hover {
+  background: #f0fdfa;
+  transform: translateX(4px);
+}
+
+.result-indicator strong {
+  display: block;
+  color: #14b8a6;
+  margin-bottom: 0.25rem;
+}
+
+.result-name {
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.result-value {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #0f172a;
+}
+
+.result-unit {
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.result-confidence {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.confidence-bar {
+  height: 8px;
+  border-radius: 4px;
+  transition: width 0.3s;
+}
+
+.result-source {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .result-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .category-buttons {
+    flex-direction: column;
+  }
+  
+  .indicators-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .csv-table {
+    font-size: 0.875rem;
+  }
+  
+  .csv-table th,
+  .csv-table td {
+    padding: 0.5rem;
+  }
+}
